@@ -2,6 +2,7 @@
 
 This mini program is developed for doctors in WuHan to let them confirm they have recevied the Medical Masks which are donated by China Mobile, BCSSA and Gliding Eagle.
 
+Note: This code base does not contain sensitive credentials to access Gliding Eagle backend API system.
 
 # 2. Development Framework
 This WeChat mini program is developed with Taro.
