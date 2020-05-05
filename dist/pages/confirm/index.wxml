@@ -1,0 +1,45 @@
+<block wx:if="{{$taroCompReady}}">
+    <block wx:if="{{isShowSuccess}}">
+        <view class="confirm-page">
+            <view>谢谢确认收货，信息已经成功上传!</view>
+            <view class="actions at-row at-row__justify--center" style="{{_$anonymousState__temp}}">
+                <view class="at-col at-col-5">
+                    <at-button compid="{{$compid__9}}">继续扫描?</at-button>
+                </view>
+            </view>
+        </view>
+    </block>
+    <view class="confirm-page" wx:else>
+        <at-toast compid="{{$compid__10}}"></at-toast>
+        <view class="prompt-text"><text>请参照下图拍照</text>
+        </view>
+        <block>
+            <block wx:if="{{imgUrls.length > 0}}">
+                <block>
+                    <swiper current="{{currentSwiperIndex}}" bindchange="anonymousFunc1" indicator-color="#999" indicator-active-color="#333" circular="{{true}}" indicator-dots="{{true}}">
+                        <swiper-item wx:key="$original" wx:for="{{loopArray2}}" wx:for-item="url" wx:for-index="_anonIdx2">
+                            <at-icon compid="{{url.$compid__8}}"></at-icon>
+                            <image class="upload-image" mode="aspectFit" src="{{url.$original}}"></image>
+                        </swiper-item>
+                    </swiper>
+                    <view class="actions at-row at-row__justify--around">
+                        <view class="at-col at-col-5">
+                            <at-button compid="{{$compid__11}}">继续拍照</at-button>
+                        </view>
+                        <view class="at-col at-col-5">
+                            <at-button compid="{{$compid__12}}">确认收货</at-button>
+                        </view>
+                    </view>
+                </block>
+            </block>
+            <block wx:else>
+                <block>
+                    <image class="upload-image-placeholder" src="{{exampleUrl}}"></image>
+                    <view class="actions at-row at-row__justify--around">
+                        <at-button compid="{{$compid__13}}">点击拍照</at-button>
+                    </view>
+                </block>
+            </block>
+        </block>
+    </view>
+</block>

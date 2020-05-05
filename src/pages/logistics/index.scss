@@ -1,0 +1,140 @@
+.logistics-page {
+  padding: 0 15PX;
+  position: relative;
+  min-height: 70vh; // 用于固定 loading 位置
+}
+
+.subtitle {
+  font-size: 32PX;
+}
+
+.product-info {
+  margin-top: 30PX;
+}
+
+.product-content {
+  margin-top: 10PX;
+}
+
+.product-images {
+  height: 50vw;
+}
+
+.product-image {
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.product-item {
+  margin: 20PX 0;
+
+  .label {
+    font-size: 20PX;
+    margin-bottom: 8PX;
+  }
+
+  .value {
+    color: #333;
+  }
+}
+
+.product-attrs {
+  position: relative;
+  overflow: hidden;
+}
+
+.fold-btn-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #f58026;
+  font-size: 12PX;
+}
+
+.expand-btn-wrap {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 50PX;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0, rgba(255, 255, 255, 0.95) 80%);
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #f58026;
+  font-size: 12PX;
+}
+
+.logistics-info {
+  margin-top: 30PX;
+}
+
+.logistics-content {
+  padding-bottom: 100PX;
+}
+
+.logistics-item {
+  margin-top: 30PX;
+  border-radius: 5PX;
+  box-shadow: 0 1PX 4PX rgba(0,0,0,0.2);
+}
+
+.logistics-item--content {
+  padding: 20PX 15PX;
+}
+
+.logistics-item--description {
+  font-size: 16PX;
+  line-height: 28PX;
+  position: relative;
+
+  .img-wrap {
+    position: absolute;
+    left: 0;
+    display: inline-block;
+    width: 28PX;
+    height: 28PX;
+    overflow: hidden;
+  }
+
+  .icon {
+    width: 28PX;
+    height: 28PX;
+    filter: drop-shadow(rgb(0, 188, 102) 28PX 0px);
+    position: relative;
+    left: -28PX;
+    border-right: 28PX solid transparent;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}
+
+.logistics-item--notes {
+  font-size: 14PX;
+  line-height: 24PX;
+  opacity: 0.7;
+}
+
+.logistics-item--description,
+.logistics-item--notes {
+  padding-left: 35PX;
+}
+
+.logistics-item--footer {
+  border-top: 1px solid #eee;
+  padding: 10PX 15PX;
+  font-size: 12PX;
+  display: flex;
+  justify-content: space-between;
+}
+
+.fab-wrap {
+  position: fixed;
+  bottom: 20PX;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+}

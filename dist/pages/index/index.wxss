@@ -1,0 +1,45 @@
+.index {
+  padding: 20PX 15PX;
+  text-align: center;
+  font-size: 0.885em;
+  height: 100%; }
+
+.banner {
+  height: 20%;
+  margin: 0 0 50rpx 0; }
+
+.center {
+  height: 65%; }
+  .center .eagleSignImg {
+    margin-top: 15PX; }
+    .center .eagleSignImg image {
+      width: 100%; }
+  .center .button {
+    margin-top: 15PX; }
+
+.footer {
+  height: 10%;
+  position: fixed;
+  left: 0;
+  right: 0;
+  font-size: 0.885em;
+  bottom: 20rpx;
+  color: #f58026; }
+  .footer .link-btn {
+    border-bottom: 1rpx solid; }
+    .footer .link-btn + .link-btn {
+      margin-left: 10PX; }
+  .footer .copywrite {
+    color: #000000; }
+
+.fix-iphonex-button {
+  bottom: 350rpx !important; }
+
+.fix-iphonex-button::after {
+  content: ' ';
+  position: fixed;
+  bottom: 0 !important;
+  height: 350rpx !important;
+  width: 100%;
+  background: #fff; }
+

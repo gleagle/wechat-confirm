@@ -1,0 +1,46 @@
+.confirm-page {
+  padding: 50PX 15PX 15PX;
+  text-align: center;
+}
+
+.prompt-text {
+  font-size: 64px;
+}
+
+.upload-image-placeholder,
+.upload-image {
+  margin-top: 10PX;
+  width: 100%;
+}
+
+.actions {
+  margin-top: 15PX;
+}
+
+.placeholder-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.3);
+}
+
+swiper {
+  height: 240PX;
+}
+
+swiper-item {
+  at-icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 50%;
+    padding: 3PX;
+  }
+}

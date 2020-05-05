@@ -1,0 +1,74 @@
+<block wx:if="{{$taroCompReady}}">
+    <view class="logistics-page">
+        <block wx:if="{{isLoading}}">
+            <at-activity-indicator compid="{{$compid__3}}"></at-activity-indicator>
+        </block>
+        <block wx:if="{{!isLoading}}">
+            <block>
+                <view class="product-info">
+                    <view class="subtitle"><text>产品信息</text>
+                    </view>
+                    <view class="product-content">
+                        <swiper class="product-images" indicator-color="#999" indicator-active-color="#333" circular="{{true}}" indicator-dots="{{true}}">
+                            <swiper-item wx:key="$original" wx:for="{{loopArray0}}" wx:for-item="url" wx:for-index="_anonIdx2">
+                                <view class="product-image" style="{{url.$loopState__temp2}}"></view>
+                            </swiper-item>
+                        </swiper>
+                        <view class="product-attrs" style="{{anonymousState__temp3}}">
+                            <view class="product-item">
+                                <view class="label">名称：</view>
+                                <view class="value">{{productInfo.name || ''}}</view>
+                            </view>
+                            <block wx:if="{{productInfo.mfr}}">
+                                <view class="product-item">
+                                    <view class="label">生产商名字：</view>
+                                    <view class="value">{{productInfo.mfr.name || ''}}</view>
+                                </view>
+                            </block>
+                            <view class="product-item" style="white-space:pre-wrap">
+                                <view class="label">描述：</view>
+                                <view class="value">{{productInfo.description || ''}}</view>
+                            </view>
+                            <block>
+                                <block wx:if="{{isShowMore}}">
+                                    <view class="fold-btn-wrap">
+                                        <view bindtap="anonymousFunc0" style="{{anonymousState__temp4}}"><text>收起</text>
+                                            <at-icon compid="{{$compid__4}}"></at-icon>
+                                        </view>
+                                    </view>
+                                </block>
+                                <block wx:else>
+                                    <view class="expand-btn-wrap">
+                                        <view bindtap="anonymousFunc1" style="{{anonymousState__temp5}}"><text>更多信息</text>
+                                            <at-icon compid="{{$compid__5}}"></at-icon>
+                                        </view>
+                                    </view>
+                                </block>
+                            </block>
+                        </view>
+                    </view>
+                </view>
+                <view class="logistics-info">
+                    <view class="subtitle"><text>全球溯源</text>
+                    </view>
+                    <view class="logistics-content">
+                        <view wx:key="date" class="logistics-item" wx:for="{{loopArray1}}" wx:for-item="item" wx:for-index="_anonIdx4">
+                            <view class="logistics-item--content">
+                                <view class="logistics-item--description">
+                                    <view class="img-wrap">
+                                        <view class="icon" style="{{item.$loopState__temp7}}"></view>
+                                    </view>{{item.$original.description}}</view>
+                                <view class="logistics-item--notes">{{item.$original.notes}}</view>
+                            </view>
+                            <view class="logistics-item--footer"><text>{{item.$original.country + ' ' + item.$original.location}}</text><text>{{item.$original.date}}</text>
+                            </view>
+                        </view>
+                    </view>
+                </view>
+            </block>
+        </block>
+        <view class="fab-wrap">
+            <at-fab compid="{{$compid__6}}">下一步</at-fab>
+        </view>
+    </view>
+</block>

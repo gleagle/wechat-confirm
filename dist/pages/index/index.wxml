@@ -1,0 +1,24 @@
+<block wx:if="{{$taroCompReady}}">
+    <view class="index">
+        <at-toast compid="{{$compid__0}}"></at-toast>
+        <view class="banner">
+            <view><text>武汉疫情，刻不容缓，全国上下，众志成城。</text>
+            </view>
+            <view><text>我们想用这个工具，帮助武汉乃至全国任何城市快速追踪并运输急缺物资。</text>
+            </view>
+        </view>
+        <view class="center">
+            <view class="eagleSignImg">
+                <image src="{{eagleSignUrl}}"></image>
+            </view>
+            <view class="button">
+                <at-button compid="{{$compid__1}}">找到箱子上的“鹰码”扫描确认!</at-button>
+            </view>
+        </view>
+        <view class="{{isIphoneX ? 'footer fix-iphonex-button' : 'footer'}}">
+            <view><text class="link-btn" bindtap="pushAboutPage">关于翔鹰</text>
+            </view>
+            <view style="{{anonymousState__temp}}"><text class="copywrite">© 2020 </text> Gliding Eagle Inc.</view>
+        </view>
+    </view>
+</block>
